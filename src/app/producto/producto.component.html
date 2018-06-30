@@ -1,3 +1,25 @@
-<p>
-  producto works!
-</p>
+  <label  >Nombre:</label>
+  <input type="text"  [(ngModel)]="nombre" >
+  <br>
+  <label >Presio</label>
+  <input type="number"  [(ngModel)]="presio" >
+  <button (click)="guardar()" [disabled] = "!frmValidado">mostrar</button>
+
+  <hr>
+  <table *ngIf= "false">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Presio</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <th>{{producto.nombre}}</th>
+        <th>{{producto.presio}}</th>
+      </tr>
+    </tbody>
+
+
+  </table>
+

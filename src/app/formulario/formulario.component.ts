@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
+  numeroUno: number;
+  numeroDos: number;
+
   constructor() { }
 
   ngOnInit() {
+    console.log('Formulario cargado');
+  }
+
+  sumar() {
+
   }
 
 }

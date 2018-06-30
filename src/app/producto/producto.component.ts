@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoComponent implements OnInit {
 
-  constructor() { }
+    nombre: string = 'laptop';
+    presio: number = 20;
+    productos : Array<object> = [];
+    frmValidado = false;
+
+  constructor() {}
 
   ngOnInit() {
+  }
+
+  guardar(){
+      const producto = {
+        nombre: this.nombre,
+        presio: this.presio
+    };
+    this.productos.push(producto);
+    console.log(this.productos);
+
+
   }
 
 }
